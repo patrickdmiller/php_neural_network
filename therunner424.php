@@ -25,7 +25,6 @@ for($iterations=0; $iterations<10000;$iterations++){
 	}
 	if($iterations % 1000 ==0){
 		echo "--".$iterations;
-		//$myNetwork->writeToFile('training23');
 	}
 }
 
@@ -78,65 +77,10 @@ foreach($tester as $test){
 	foreach($myNetwork->getHiddenLayer() as $o)
 		printf("\t %01.4f", $o);
 }
-/*
-
-$tester=array(
-	array(0,0,0,0,0,1),
-	array(0,0,0,0,1,0),
-	array(0,0,0,1,0,0),
-	array(0,0,1,0,0,0),
-	array(0,1,0,0,0,0),
-	array(1,0,0,0,0,0),
-	array(0,0,0,0,1,1),
-	array(0,0,0,1,1,0),
-	array(0,0,1,1,0,0),
-	array(0,1,1,0,0,0),
-	array(1,1,0,0,0,0),
-	array(1,0,0,0,0,1),
-	array(0,0,0,1,1,1),
-	array(0,0,1,1,1,0),
-	array(0,1,1,1,0,0),
-	array(1,1,1,0,0,0),
-	array(1,1,0,0,0,1),
-	array(1,0,0,0,1,1),
-	array(0,0,0,1,1,1),
-	array(0,1,1,1,1,0),
-	array(1,1,1,1,0,0),
-	array(1,1,1,0,0,1),
-	array(1,1,0,0,1,1),
-	array(1,0,0,1,1,1),
-);
-
-
-for($iterations=0; $iterations<150000;$iterations++){
-	foreach($tester as $test){
-		$myNetwork->inputLayer($test);
-		$myNetwork->adjust($test,.3);
-	}
-	if($iterations % 5000 ==0){
-		echo "--".$iterations;
-		//$myNetwork->writeToFile('training23');
-	}
-}
-echo "\n-";
-foreach($tester as $test){
-	$myNetwork->inputLayer($test);
-	$myNetwork->output();
-	echo "\n";
-	foreach($myNetwork->getInputLayer() as $o)
-		printf("\t %01.4f", $o);
-	echo " |";
-	foreach($myNetwork->getOutputLayer() as $o)
-		printf("\t %01.4f", $o);
-	echo " |";
-	foreach($myNetwork->getHiddenLayer() as $o)
-		printf("\t %01.4f", $o);
-}
-*/
 
 if($debug==1)
 	print_r($myNetwork);
 
-$myNetwork->writeToFile('training3');
+$myNetwork->writeToFile('training424');
 
 ?>
