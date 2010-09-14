@@ -1,8 +1,4 @@
-<?	/*
-	Patrick Miller
-	neural network with back propagation
-	*/
-
+<?
 include_once('./node.php');
 
 Class NeuralNetwork{
